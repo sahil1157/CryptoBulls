@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import bulls from '../assets/logo.png';
@@ -9,11 +7,28 @@ import ENG from '../assets/Flag.png'
 import japan from '../assets/Flag_of_Japan.svg.webp'
 import usa from '../assets/usa.webp'
 import nep from '../assets/Flag_of_Nepal.svg.png'
+import RightEllipse from '../assets/RightEllipse.png'
 
 const Navbar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [selectedCountry, setSelectedCountry] = useState({ name: 'Nep', flag: nep });
+    const [navbarBackground, setNavbarBackground] = useState(false);
+
+    const handleScroll = () => {
+        if (window.scrollY > 50) {
+            setNavbarBackground(true);
+        } else {
+            setNavbarBackground(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     useEffect(() => {
         if (isSidebarOpen) {
@@ -44,14 +59,12 @@ const Navbar = () => {
     };
 
     return (
-        <div className='bg-gradient-to-tr from-[#013A40] to-[#026874] sticky top-0 z-50 flex'>
+        <div className={`p-2 bg-transparent absolute w-[100%] top-0 flex ${navbarBackground ? 'bg-gradient-to-b sticky from-[#013A40] to-[#026874] z-50' : 'b'}`}>
             <div style={{ paddingInline: '6%' }} className="relative p-2 w-full flex h-fit">
-
                 <div className="flex flex-row justify-between w-full h-fit items-center">
                     <div className="flex items-center w-fit h-fit flex-row gap-2">
                         <img src={bulls} className="h-[80px]" alt="" />
                     </div>
-                    {/* Desktop Navigation Links... */}
                     <div className="hidden lg:flex z-30 flex-row gap-10">
                         {links.map((x, ind) => (
                             <Link
@@ -63,7 +76,6 @@ const Navbar = () => {
                             </Link>
                         ))}
                     </div>
-                    {/* Dropdown Button for large devicess... */}
                     <div className="relative hidden lg:flex flex-row gap-3">
                         <button
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -87,15 +99,12 @@ const Navbar = () => {
                             </div>
                         )}
                     </div>
-                    {/* Hamburger Menu for Mobile.. */}
                     <div className="flex lg:hidden flex-row items-center gap-3">
                         <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                             <RxHamburgerMenu size={25} className='text-white relative z-20' />
                         </button>
                     </div>
                 </div>
-
-                {/* Sidebar for Mobile... */}
                 <div className={`fixed top-0 left-0 w-[300px] h-full bg-gray-800 z-50 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`}>
                     <RxCross1 size={25} onClick={() => setIsSidebarOpen(false)} className='absolute h-fit right-4 text-white top-6 cursor-pointer' />
                     <div className="flex flex-col gap-16 h-fit mt-24 place-items-center justify-center items-center">
@@ -109,7 +118,6 @@ const Navbar = () => {
                                 {x.name}
                             </Link>
                         ))}
-                        {/* Dropdown Button for Mobile..... */}
                         <div className="relative">
                             <button
                                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -141,4 +149,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
