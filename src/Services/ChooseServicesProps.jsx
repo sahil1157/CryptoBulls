@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ChooseServicesProps = ({ items }) => {
+const ChooseServicesProps = () => {
     const arr = [
         {
             name: 'Proven Strategies',
