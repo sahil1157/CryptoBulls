@@ -3,7 +3,7 @@ import darkhole from '../assets/Darkholeimg.png';
 import innerDarkhole from '../assets/InnerDarkhole.png';
 import LongRod from '../assets/LongRod.png';
 
-const SliderProps = ({ items }) => {
+const SliderProps = () => {
     const item = [
         {
             name: "DEPOSIT",
@@ -41,8 +41,8 @@ const SliderProps = ({ items }) => {
                                     <p className='flex absolute bottom-32 text-white text-2xl justify-center font-[600] w-[100px]'>{x.steps}</p>
                                 </div>
                                 <div className='text-white flex flex-col gap-2'>
-                                    <p className='text-xl font-[500] text-[20px]'>{x.header}</p>
-                                    <p className='font-[400] text-[14px] font-body'>{x.details}</p>
+                                    <p className='text-xl font-[500] font-expletus text-[20px]'>{x.header}</p>
+                                    <p className='font-[400] text-[14px] font-monst'>{x.details}</p>
                                 </div>
                             </div>
                         </div>

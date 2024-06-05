@@ -9,7 +9,7 @@ const LeftEllupse = () => {
         <div>
             <img
                 src={ell4}
-                className="absolute z-0 left-0 flex bottom-0  w-fit"
+                className="absolute z-0  left-0 flex bottom-0  w-fit"
                 alt=""
             />
             <img

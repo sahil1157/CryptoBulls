@@ -24,7 +24,7 @@ const ChooseServicesProps = ({ items }) => {
             {
                 arr && arr.map((x, ind) => {
                     return (
-                        <div key={ind} className='w-fit justify-center items-center flex  h-auto lg:h-[160px] rounded-xl border-[1px] text-white border-white bg-[#10121D]' >
+                        <div key={ind} className='w-fit justify-center font-monst items-center flex  h-auto lg:h-[160px] rounded-xl border-[1px] text-white border-white bg-[#10121D]' >
                             <div className='p-4 lg:p-8 items-center gap-4 flex'>
                                 <img className='w-[50px] h-[50px] lg:w-[69px] lg:h-[69px] rounded-full' src={x.img} alt="" />
                                 <div className='flex -mt-1 lg:-mt-3 flex-col gap-1'>
