@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import bulls from '../../assets/Group 94.png';
+import bulls from '../../assets/logo.png';
 import RightEllipse from '../../assets/RightEllipse.png';
 import { RxCross1 } from "react-icons/rx";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -26,8 +26,7 @@ const Navbar = () => {
                 />
                 <div className="flex flex-row justify-between w-full h-fit items-center">
                     <div className="flex items-center w-fit h-fit flex-row gap-2">
-                        <img src={bulls} className="h-[45px] w-[35.43px]" alt="" />
-                        <p className="text-[25.1px] text-white">Crypto Bulls</p>
+                        <img src={bulls} className="h-[80px]" alt="" />
                     </div>
                     <div className="hidden lg:flex z-30 flex-row gap-10">
                         {links.map((x, ind) => (
@@ -44,9 +43,6 @@ const Navbar = () => {
                         <button className="w-[82px] h-[40px] gap-2 text-center flex-row rounded-full flex items-center bg-white text-black">
                             <img src={ENG} className="w-[30px] ml-1 h-[30px] rounded-[30px]" alt="" />
                             <p className="text-[#5E5E5E] items-center flex font-semibold text-sm">ENG</p>
-                        </button>
-                        <button className="w-[93px] h-[40px] rounded-[30px] font-semibold text-[#5E5E5E] bg-white text-sm">
-                            LOGIN
                         </button>
                     </div>
                     <div className="flex lg:hidden flex-row items-center gap-3">
@@ -71,9 +67,6 @@ const Navbar = () => {
                         ))}
                         <Link to="#" className="text-white text-lg" onClick={() => setIsSidebarOpen(false)}>
                             ENG
-                        </Link>
-                        <Link to="#" className="text-white text-lg" onClick={() => setIsSidebarOpen(false)}>
-                            LOGIN
                         </Link>
                     </div>
                 </div>
