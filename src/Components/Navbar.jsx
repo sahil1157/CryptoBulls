@@ -76,7 +76,7 @@ const Navbar = () => {
                             </Link>
                         ))}
                     </div>
-                    <div className="relative hidden lg:flex flex-row gap-3">
+                    <div className="relative z-50 hidden lg:flex flex-row gap-3">
                         <button
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                             className="w-[130px] mr-6 h-[40px] gap-2 text-center flex-row rounded-full flex items-center bg-white text-black"
@@ -118,7 +118,7 @@ const Navbar = () => {
                                 {x.name}
                             </Link>
                         ))}
-                        <div className="relative">
+                        <div className="relative z-40">
                             <button
                                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                                 className="w-[130px] h-[40px] gap-2 text-center flex-row rounded-full flex items-center bg-white text-black"
