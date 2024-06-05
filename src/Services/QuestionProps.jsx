@@ -12,47 +12,56 @@ const QuestionProps = () => {
         {
             number: '2',
             ques: 'How does Crypto Bulls work?',
-            answer: ''
+            answer: 'Crypto Bulls is a cryptocurrency investment platform that offers a service for users looking to grow their wealth through cryptocurrency investments.'
+
         },
         {
             number: '3',
             ques: 'Is my investment with Crypto Bulls safe?',
-            answer: ''
+            answer: 'Crypto Bulls is a cryptocurrency investment platform that offers a service for users looking to grow their wealth through cryptocurrency investments.'
+
         },
         {
             number: '4',
             ques: 'What is the minimum investment amount?',
-            answer: ''
+            answer: 'Crypto Bulls is a cryptocurrency investment platform that offers a service for users looking to grow their wealth through cryptocurrency investments.'
+
         },
         {
             number: '5',
             ques: 'What kind of returns can I expect with Crypto Bulls?',
-            answer: ''
+            answer: 'Crypto Bulls is a cryptocurrency investment platform that offers a service for users looking to grow their wealth through cryptocurrency investments.'
+
         },
         {
             number: '6',
             ques: 'Can I withdraw my investment before the two years?',
-            answer: ''
+            answer: 'Crypto Bulls is a cryptocurrency investment platform that offers a service for users looking to grow their wealth through cryptocurrency investments.'
+
         },
         {
             number: '7',
             ques: 'How do I monitor the performance of my investment?',
-            answer: ''
+            answer: 'Crypto Bulls is a cryptocurrency investment platform that offers a service for users looking to grow their wealth through cryptocurrency investments.'
+
         },
         {
             number: '8',
             ques: 'Are there any fees associated with investing in Crypto Bulls?',
-            answer: ''
+            answer: 'Crypto Bulls is a cryptocurrency investment platform that offers a service for users looking to grow their wealth through cryptocurrency investments.'
+
         },
         {
             number: '9',
             ques: 'Are Crypto Bulls regulated?',
-            answer: ''
+            answer: 'Crypto Bulls is a cryptocurrency investment platform that offers a service for users looking to grow their wealth through cryptocurrency investments.'
+
         },
         {
             number: '10',
             ques: 'What happens to my investment if there are market fluctuations?',
-            answer: ''
+            answer: 'Crypto Bulls is a cryptocurrency investment platform that offers a service for users looking to grow their wealth through cryptocurrency investments.'
+
         },
     ];
 
