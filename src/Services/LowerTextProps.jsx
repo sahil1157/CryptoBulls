@@ -29,7 +29,7 @@ const LowerTextProps = ({ items }) => {
     return (
         <>
             <div className='w-full text-white justify-center flex'>
-                <div className='flex flex-col gap-4'>
+                <div className='flex font-monst flex-col gap-4'>
                     {
                         item && item.map((x, ind) => {
                             return (

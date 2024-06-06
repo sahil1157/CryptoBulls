@@ -1,11 +1,11 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Home from '../../Pages/Home'
-import Blogs from '../../Pages/Blogs'
-import Feature from '../../Pages/Feature'
-import Contact from '../../Pages/Contact'
-import Navbar from '../Navbar/Navbar'
-import EndFooter from '../Footer/EndFooter'
+import Home from '../Pages/Home'
+import Blogs from '../Pages/Blogs'
+import Feature from '../Pages/Feature'
+import Contact from '../Pages/Contact'
+import Navbar from './Navbar'
+import EndFooter from './Footer/EndFooter'
 
 const Routing = () => {
     return (

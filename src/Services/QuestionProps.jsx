@@ -72,7 +72,7 @@ const QuestionProps = () => {
     };
 
     return (
-        <div className='flex flex-col font-body gap-4 justify-center items-center'>
+        <div className='flex flex-col font-body gap-4 font-monst justify-center items-center'>
             {ques.map((x, ind) => (
                 <div key={ind} className='lg:w-[480px] xl:w-[560px] h-fit w-full p-2 text-white rounded-xl bg-[#0F101E] border-[1px] border-black'>
                     <div className='w-full flex flex-col gap-4'>
