@@ -13,7 +13,7 @@ const IndexIntro = () => {
     }
     return (
         <>
-            <div className='bg-gradient-to-tr p-7 lg:p-12 to-[#013A40] from-[#0396A6]' >
+            <div className='bg-gradient-to-tr p-5 to-[#013A40] from-[#0396A6]' >
                 <div style={{ paddingInline: '13%' }} className='lg:mt-16 flex flex-col-reverse justify-center lg:flex-row gap-5 w-full lg:justify-between'>
                     <div className='flex lg:justify-start gap-3 justify-center items-center flex-col'>
                         <Left />
