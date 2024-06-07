@@ -3,12 +3,9 @@ import Left from './Left';
 import LeftEllupse from './leftEllipse/LeftEllupse';
 import ChooseServicesProps from '../../Services/ChooseServicesProps';
 
-
-
 const IndexChoose = () => {
-
     return (
-        <div className='bg-gradient-to-b md:mt-0 pt-20 from-[#013A40] to-[#037885]'>
+        <div id="choose" className='bg-gradient-to-b from-[#013A40] to-[#037885]'>
             <div style={{ paddingInline: '13%' }} className="relative flex flex-col items-center justify-center w-full h-full p-12 mx-auto gap-7">
                 <LeftEllupse />
                 <Left />

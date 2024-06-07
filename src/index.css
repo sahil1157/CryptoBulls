@@ -5,6 +5,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --custom-dark: #013a40;
   --custom-light: #026874;
@@ -23,6 +25,14 @@ body {
     var(--custom-light),
     var(--custom-dark)
   );
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a.underline {
+  text-decoration: underline;
 }
 
 .gradient-border {

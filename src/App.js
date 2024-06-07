@@ -1,10 +1,15 @@
 import React from 'react'
-import Routing from './Components/Routing';
+import Navbar from './Components/Navbar';
+import Home from './Pages/Home';
+import EndFooter from './Components/Footer/EndFooter';
 
 const App = () => {
   return (
-    <div>
-      <Routing />
+    <div className='flex flex-col min-h-screen'>
+      {/* <Routing /> */}
+      <Navbar/>
+      <Home/>
+      <EndFooter/>
     </div>
   )
 }
