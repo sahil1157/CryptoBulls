@@ -1,8 +1,8 @@
 import React from 'react'
-import ell4 from '../../../assets/Ellipse/ell4.png';
- import ell3 from '../../../assets/Ellipse/ell3.png';
- import ell2 from '../../../assets/Ellipse/ell2.png';
- import ell1 from '../../../assets/Ellipse/ell2.png';
+ import ell4 from '../../../assets/Ellipse/ell4.png';
+  import ell3 from '../../../assets/Ellipse/ell3.png';
+  import ell2 from '../../../assets/Ellipse/ell2.png';
+  import ell1 from '../../../assets/Ellipse/ell2.png';
 
 const LeftEllupse = () => {
     return (
