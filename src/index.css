@@ -1,21 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400..700;1,400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-  --custom-dark: #013a40;
-  --custom-light: #026874;
-  --black-gradient: linear-gradient(0deg, #000000 6.96%, #434343 100.07%);
-  --highlight-font-family: "Expletus Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
-    --body-font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+	--custom-dark: #013a40;
+	--custom-light: #026874;
+	--black-gradient: linear-gradient(0deg, #000000 6.96%, #434343 100.07%);
+	--highlight-font-family: "Expletus Sans", -apple-system, BlinkMacSystemFont,
+		"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+		"Droid Sans", "Helvetica Neue", sans-serif;
+	--body-font-family: "Montserrat", -apple-system, BlinkMacSystemFont,
+		"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+		"Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -41,71 +40,83 @@
 }
 
 body {
-  
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-.navbar{
-  background: linear-gradient(
-    to bottom,
-    var(--custom-dark),
-    var(--custom-light),
-    var(--custom-dark)
-  );
+.navbar {
+	background: linear-gradient(
+		to bottom,
+		var(--custom-dark),
+		var(--custom-light),
+		var(--custom-dark)
+	);
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 a.underline {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 .gradient-border {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
 }
 
 .gradient-border::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 50%;
-  padding: 1px;
-  background: linear-gradient(180deg, #000000, #0396A6);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude; 
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 50%;
+	padding: 1px;
+	background: linear-gradient(180deg, #000000, #0396a6);
+	-webkit-mask: linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
 }
 
 .gradient-border-inner {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background-color: #0F101E; 
-  border-radius: 50%;
-  z-index: 1;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background-color: #0f101e;
+	border-radius: 50%;
+	z-index: 1;
 }
 
-
-
-
-
+.scroll-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: var(--black-gradient);
+	border: none;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	font-size: 1.5rem;
+	color: #fff;
+	border-radius: 50%;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	width: 40px;
+	height: 40px;
+}

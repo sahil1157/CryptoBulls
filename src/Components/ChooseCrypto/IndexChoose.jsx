@@ -5,7 +5,7 @@ import LeftEllupse from '../Ellipse/LeftEllupse';
 
 const IndexChoose = () => {
     return (
-        <div id="choose" className='bg-gradient-to-b from-[#013A40] to-[#037885]'>
+        <section id="choose" className='bg-gradient-to-b from-[#013A40] to-[#037885]'>
             <div style={{ paddingInline: '13%' }} className="relative flex flex-col items-center justify-center w-full h-full p-12 mx-auto gap-7">
                 <LeftEllupse />
                 <Left />
@@ -13,7 +13,7 @@ const IndexChoose = () => {
                     <ChooseServicesProps />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

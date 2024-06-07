@@ -13,7 +13,7 @@ const IndexIntro = forwardRef(() => {
     };
     
     return (
-        <div id="intro" className='bg-gradient-to-tr p-5 to-[#013A40] from-[#0396A6]' style={{ paddingTop: '10vh' }}>
+        <section id="intro" className='bg-gradient-to-tr p-5 to-[#013A40] from-[#0396A6]' style={{ paddingTop: '10vh' }}>
             <div style={{ paddingInline: '13%' }} className='lg:mt-16 flex flex-col-reverse justify-center lg:flex-row gap-5 w-full lg:justify-between'>
                 <div className='flex lg:justify-start gap-3 justify-center items-center flex-col'>
                     <Left />
@@ -23,7 +23,7 @@ const IndexIntro = forwardRef(() => {
                 </div>
                 <Right />
             </div>
-        </div>
+        </section>
     );
 });
 

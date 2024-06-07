@@ -6,7 +6,7 @@ import LeftEllupse2 from '../Ellipse/LeftEllipse'
 
 const IndexQuestions = () => {
     return (
-        <div id='faq' className='from-[#013A40] lg:pt-[5vh] relative flex flex-col to-[#0396A6] bg-gradient-to-tr'>
+        <section id='faq' className='from-[#013A40] lg:pt-[5vh] relative flex flex-col to-[#0396A6] bg-gradient-to-tr'>
             <div style={{ paddingInline: '13%' }} className='flex relative flex-col lg:flex-row justify-between gap-12 w-full h-full mt-16 md:mt-24'>
                 <LeftEllupse2 />
                 <Left />
@@ -17,7 +17,7 @@ const IndexQuestions = () => {
             <div style={{ paddingInline: '13%' }} className='items-center flex w-full h-[70vh] md:h-[50vh]'>
                 <Partners />
             </div>
-        </div>
+        </section>
     )
 }
 

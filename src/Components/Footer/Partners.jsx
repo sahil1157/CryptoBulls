@@ -28,7 +28,7 @@ const Partners = () => {
                     partners && partners.map((x, ind) => {
                         return (
                             <div key={ind} className='flex p-2 flex-row justify-center items-center gap-1'>
-                                <img src={x.icon} alt="" className='w-52 h-fit md:h-16' />
+                                <img src={x.icon} alt="" className='h-fit md:h-16' />
                             </div>
                         )
                     })

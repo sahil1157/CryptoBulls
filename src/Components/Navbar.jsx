@@ -13,36 +13,13 @@ const links = [
     { path: 'faq', name: 'Faq' },
 ];
 
-const Navbar = () => {
+const Navbar = ({activeSection, scrollToSection, showScrollTop}) => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [selectedCountry, setSelectedCountry] = useState({ name: 'ENG', code: 'gb' });
-    const [navbarBackground, setNavbarBackground] = useState(false);
-    const [activeLink, setActiveLink] = useState(links[0].name)
-
-    const onClickLink = (link) => {
-        setIsSidebarOpen(false)
-        setActiveLink(() => link)
-    }
-
 
     const dropdownRef = useRef(null);
     const sidebarRef = useRef(null);
-
-    const handleScroll = () => {
-        if (window.scrollY > 50) {
-            setNavbarBackground(true);
-        } else {
-            setNavbarBackground(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
 
     useEffect(() => {
         if (isSidebarOpen) {
@@ -86,7 +63,7 @@ const Navbar = () => {
     };
 
     return (
-        <div ref={dropdownRef} className={`p-2 bg-transparent absolute w-[100%] top-0 flex ${navbarBackground ? 'bg-gradient-to-b sticky from-[#013A40] to-[#026874] z-50' : ''}`}>
+        <div ref={dropdownRef} className={`p-2 bg-transparent absolute w-[100%] top-0 flex ${showScrollTop ? 'bg-gradient-to-b sticky from-[#013A40] to-[#026874] z-50' : ''}`}>
             <div style={{ paddingInline: '6%' }} className="relative p-2 w-full flex h-fit">
                 <div className="flex flex-row justify-between w-full h-fit items-center">
                     <div className="flex items-center w-fit h-fit flex-row gap-2">
@@ -96,12 +73,8 @@ const Navbar = () => {
                         {links.map((x, ind) => (
                             <Link
                                 key={ind}
-                                to={x.path}
-                                smooth={true}
-                                duration={800}
-                                className={`text-white md:cursor-pointer text-lg ${activeLink === x.name && "border-b-2 border-white"}`}
-                                onClick={() => onClickLink(x.name)}
-
+                                className={`text-white md:cursor-pointer text-lg ${activeSection === x.path && "border-b-2 border-white"}`}
+                                onClick={() => scrollToSection(x.path)}
                             >
                                 {x.name}
                             </Link>
@@ -169,11 +142,12 @@ const Navbar = () => {
                         {links.map((x, ind) => (
                             <Link
                                 key={ind}
-                                to={x.path}
-                                smooth={true}
-                                duration={800}
                                 className="text-white text-lg"
-                                onClick={() => setIsSidebarOpen(false)}
+                                onClick={(e) => {
+                                    e.preventDefault()
+                                    scrollToSection(x.path)
+                                    setIsSidebarOpen(false);
+                                }}
                             >
                                 {x.name}
                             </Link>
