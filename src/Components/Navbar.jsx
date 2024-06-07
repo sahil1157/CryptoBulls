@@ -5,11 +5,26 @@ import 'flag-icons/css/flag-icons.min.css';
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Link } from 'react-scroll';
 
+
+const links = [
+    { path: 'strategy', name: 'Home' },
+    { path: 'intro', name: 'Introduction' },
+    { path: 'services', name: 'Services' },
+    { path: 'faq', name: 'Faq' },
+];
+
 const Navbar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [selectedCountry, setSelectedCountry] = useState({ name: 'ENG', code: 'gb' });
     const [navbarBackground, setNavbarBackground] = useState(false);
+    const [activeLink, setActiveLink] = useState(links[0].name)
+
+    const onClickLink = (link) => {
+        setIsSidebarOpen(false)
+        setActiveLink(() => link)
+    }
+
 
     const dropdownRef = useRef(null);
     const sidebarRef = useRef(null);
@@ -53,12 +68,6 @@ const Navbar = () => {
         };
     }, []);
 
-    const links = [
-        { path: 'strategy', name: 'Home' },
-        { path: 'intro', name: 'Introduction' },
-        { path: 'services', name: 'Services' },
-        { path: 'faq', name: 'Faq' },
-    ];
 
     const countries = [
         { name: 'ENG', code: 'gb' },
@@ -90,8 +99,9 @@ const Navbar = () => {
                                 to={x.path}
                                 smooth={true}
                                 duration={800}
-                                className="text-white md:cursor-pointer text-lg"
-                                onClick={() => setIsSidebarOpen(false)}
+                                className={`text-white md:cursor-pointer text-lg ${activeLink === x.name && "border-b-2 border-white"}`}
+                                onClick={() => onClickLink(x.name)}
+
                             >
                                 {x.name}
                             </Link>
