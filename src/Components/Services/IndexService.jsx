@@ -11,14 +11,14 @@ const IndexService = () => {
         name3: 'Regular Audits'
     }
     const x = {
-        header: 'COSTOMER SUPPORT',
+        header: 'CUSTOMER SUPPORT',
         name1: '24/7 support',
-        name2: 'Deducated managers',
+        name2: 'Dedicated managers',
         name3: 'Comprehensive FAQs'
     }
     return (
         <>
-            <div className='bg-gradient-to-tl to-[#013A40] from-[#0396A6] text-white w-full flex flex-col gap-12 text-center'>
+            <div id="services" className='bg-gradient-to-tl pt-[5vh] lg:pt-[10vh] to-[#013A40] from-[#0396A6] text-white w-full flex flex-col gap-12 text-center'>
                 <div style={{ paddingInline: "13%" }} className='pt-12'>
                     <p className='text-[36px] font-expletus font-[700]'>Services</p>
                     <div className='xl:flex-row xl:justify-between xl:flex w-full md:grid-cols-2 grid-cols-1 flex md:grid flex-wrap justify-center gap-12 md:gap-7 mt-24'>

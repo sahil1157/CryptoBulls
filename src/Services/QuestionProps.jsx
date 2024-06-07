@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import '../../src/index.css'
+import '../../src/index.css';
 
 const QuestionProps = () => {
-
     const ques = [
         {
             number: '1',
@@ -72,11 +71,15 @@ const QuestionProps = () => {
     };
 
     return (
-        <div className='flex flex-col gap-4 font-monst justify-center items-center'>
+        <div className='flex flex-col gap-4 lg:pt-[8vh] font-monst justify-center items-center'>
             {ques.map((x, ind) => (
-                <div key={ind} className='lg:w-[480px] xl:w-[560px] h-fit w-full p-2 text-white rounded-xl bg-[#0F101E] border-[1px] border-black'>
+                <div 
+                    key={ind} 
+                    onClick={() => toggleAnswer(ind)} 
+                    className='lg:w-[480px] xl:w-[560px] h-fit w-full p-2 text-white rounded-xl bg-[#0F101E] border-[1px] border-black cursor-pointer'
+                >
                     <div className='w-full flex flex-col gap-4'>
-                        <div className='flex h-fit justify-between gap-5'>
+                        <div className='flex h-fit justify-between items-center gap-5'>
                             <div className='flex w-full flex-row gap-5'>
                                 <div>
                                     <div className='gradient-border'>
@@ -94,13 +97,13 @@ const QuestionProps = () => {
                                     </div>
                                 </div>
                             </div>
-                            <button onClick={() => toggleAnswer(ind)} className='cursor-pointer px-2 h-fit items-center focus:outline-none'>
+                            <div className='flex h-fit px-2'>
                                 {activeIndex === ind ? (
                                     <p className='text-white font-[700] text-[16px]'>-</p>
                                 ) : (
                                     <p className='text-white font-[700] text-[16px]'>+</p>
                                 )}
-                            </button>
+                            </div>
                         </div>
                         <div className='md:hidden block'>
                             {activeIndex === ind && (

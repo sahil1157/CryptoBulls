@@ -1,13 +1,12 @@
 import React from 'react'
 import Left from './Left'
-import LeftEllupse2 from './LeftEllipse'
 import QuestionProps from '../../Services/QuestionProps'
 import Partners from '../Footer/Partners'
+import LeftEllupse2 from '../Ellipse/LeftEllipse'
 
 const IndexQuestions = () => {
     return (
-
-        <div className='from-[#013A40] h-full relative flex flex-col to-[#0396A6] bg-gradient-to-tr'>
+        <div id='faq' className='from-[#013A40] lg:pt-[5vh] relative flex flex-col to-[#0396A6] bg-gradient-to-tr'>
             <div style={{ paddingInline: '13%' }} className='flex relative flex-col lg:flex-row justify-between gap-12 w-full h-full mt-16 md:mt-24'>
                 <LeftEllupse2 />
                 <Left />

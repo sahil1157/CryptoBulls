@@ -1,7 +1,7 @@
 import React from 'react'
-import ellp1 from './Ellipses/ellip1.png'
-import ellp2 from './Ellipses/Ellip2.png'
-import ellp3 from './Ellipses/Ellip3.png'
+import ellp1 from '../../assets/Ellipses/ellip1.png'
+import ellp2 from '../../assets/Ellipses/Ellip2.png'
+import ellp3 from '../../assets/Ellipses/Ellip3.png'
 
 const LeftEllupse2 = () => {
     return (
