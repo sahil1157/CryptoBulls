@@ -72,7 +72,7 @@ const QuestionProps = () => {
     };
 
     return (
-        <div className='flex flex-col font-body gap-4 font-monst justify-center items-center'>
+        <div className='flex flex-col gap-4 font-monst justify-center items-center'>
             {ques.map((x, ind) => (
                 <div key={ind} className='lg:w-[480px] xl:w-[560px] h-fit w-full p-2 text-white rounded-xl bg-[#0F101E] border-[1px] border-black'>
                     <div className='w-full flex flex-col gap-4'>
@@ -83,8 +83,8 @@ const QuestionProps = () => {
                                         <p className='text-white text-sm md:text-lg font-bold'>{x.number}</p>
                                     </div>
                                 </div>
-                                <div className='flex gap- h-full flex-col'>
-                                    <p className='font-[500] text-[16px]'>{x.ques}</p>
+                                <div className='flex justify-center h-full flex-col'>
+                                    <p className='font-[500] text-[18px]'>{x.ques}</p>
                                     <div className='md:block hidden'>
                                         {activeIndex === ind && (
                                             <div className='transition-all w-full'>

@@ -13,22 +13,7 @@ const Navbar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [selectedCountry, setSelectedCountry] = useState({ name: 'Nep', flag: nep });
-    const [navbarBackground, setNavbarBackground] = useState(false);
 
-    const handleScroll = () => {
-        if (window.scrollY > 50) {
-            setNavbarBackground(true);
-        } else {
-            setNavbarBackground(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
 
     const [navbarBackground, setNavbarBackground] = useState(false);
 

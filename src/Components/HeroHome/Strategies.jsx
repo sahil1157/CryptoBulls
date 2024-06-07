@@ -5,7 +5,7 @@ import RightEllipse from '../../assets/RightEllipse.png'
 
 const IndexStrategy = () => {
     return (
-        <div className='navbar h-[100vh] pt-24 lg:flex top-0 w-full '>
+        <div className='navbar h-[100vh] box-border pt-24 lg:flex top-0 w-full '>
             <img
                 src={RightEllipse}
                 className="absolute z-0 right-0 top-0 w-full max-w-[964px] h-auto max-h-[639.97px] md:object-cover"
