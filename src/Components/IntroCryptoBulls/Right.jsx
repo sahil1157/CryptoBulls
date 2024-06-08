@@ -13,7 +13,7 @@ const Right = () => {
     return (
         <div className='mt-8 w-full xl:items-center xl:justify-between items-center lg:justify-end flex flex-col gap-5'>
             <div className='flex justify-center'>
-                <img src={Bulls} alt="" className='lg:max-w-[250px] lg:w-full w-[180px] max-h-[377px] h-auto' />
+                <img src={Bulls} alt="" className='lg:max-w-[250px] lg:w-full w-[110px] sm:w-[180px] sm:h-auto max-h-[377px] h-[120px]' />
             </div>
             <div className='lg:block hidden'>
                 <Text x={x} />

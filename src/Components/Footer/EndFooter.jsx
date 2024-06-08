@@ -17,9 +17,9 @@ const EndFooter = () => {
     ]
     return (
         <div>
-            <div style={{ paddingInline: '13%' }} className='h-fit w-full flex md:flex-row flex-col items-center justify-center gap-7 p-4 md:justify-between text-white bg-black'>
-                <div>
-                    <p>Copyright © 2024Crypto Bulls.All rights reserved.</p>
+            <div className='h-fit w-full flex md:flex-row flex-col items-center justify-center gap-7 p-4 md:justify-between text-white bg-black px-[5%] sm:px-[13%]'>
+                <div className='w-full'>
+                    <p className='text-center md:text-start'>Copyright © 2024Crypto Bulls.All rights reserved.</p>
                 </div>
                 <div className='flex flex-row gap-3'>
                     {

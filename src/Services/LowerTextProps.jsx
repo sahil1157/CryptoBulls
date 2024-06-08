@@ -36,9 +36,9 @@ const LowerTextProps = ({ items }) => {
                                 <div key={ind} className='flex mt-9 lg:mt-2 gap-3 flex-col'>
                                     <div className='flex gap-3 text-start justify-start items-center'>
                                         <div className='w-[15px] h-[15px] bg-white rounded-full'></div>
-                                        <p className='text-2xl font-[600] text-white'>{x.name}</p>
+                                        <p className='sm:text-2xl text-lg font-[600] text-white'>{x.name}</p>
                                     </div>
-                                    <div className={`font-body ${x.className}`}>
+                                    <div className={`font-monst ${x.className}`}>
                                         <p className='text-start font-[400] text-[14px] flex flex-wrap'>
                                             {x.details}
                                         </p>

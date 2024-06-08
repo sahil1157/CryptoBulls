@@ -32,7 +32,7 @@ const SliderProps = () => {
             {
                 item && item.map((x, ind) => {
                     return (
-                        <div key={ind} className='w-[280px] md:w-[329px] min-h-[238px] h-full rounded-xl mt-16 md:mt-24 bg-[#010314]'>
+                        <div key={ind} className='w-[280px] md:w-[329px] min-h-[218px] h-full rounded-xl mt-16 md:mt-24 bg-[#010314]'>
                             <div className='flex gap-3 justify-start items-start w-full pt-16 p-8'>
                                 <div className='relative justify-center text-center items-center flex'>
                                     <img src={darkhole} className='max-w-[30px] max-h-[30px] rounded-full' alt="" />
